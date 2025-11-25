@@ -10,12 +10,6 @@
     #binding-cells = <0>;
     bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
   };
-  macro_braces: macro_braces {
-    compatible = "zmk,behavior-macro";
-    label = "macro_braces";
-    #binding-cells = <0>;
-    bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-  };
   macro_parens: macro_parens {
     compatible = "zmk,behavior-macro";
     label = "macro_parens";
@@ -28,197 +22,113 @@
     #binding-cells = <0>;
     bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
   };
+  macro_lbrackets: macro_lbrackets {
+    compatible = "zmk,behavior-macro";
+    label = "macro_lbrackets";
+    #binding-cells = <0>;
+    bindings = <&kp LS(LBKT)>, <&kp LS(RBKT)>, <&kp LEFT>;
+  };
   macro_kinesis: macro_kinesis {
     compatible = "zmk,behavior-macro";
     label = "macro_kinesis";
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
-  Win_Cut: Windows_Cut {
+  macro_gmail: macro_gmail {
     compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LC(X)>;
-    display-name = "Windows Cut";
+    label = "macro_gmail";
+    #binding-cells = <0>; 
+    wait-ms = <15>;
+    tap-ms = <10>;
+    bindings = <&kp R &kp A &kp N &kp R &kp A &kp N &kp H &kp A &kp O &kp R &kp A &kp N &kp Z &kp H &kp A &kp N &kp G>, <&kp AT>, <&kp G>, <&kp M>, <&kp A>, <&kp I>, <&kp L>, <&kp DOT>, <&kp C>, <&kp O>, <&kp M>;
   };
-
-  Win_Copy: Windows_Copy {
+  macro_psu: macro_psu {
     compatible = "zmk,behavior-macro";
+    label = "macro_psu";
     #binding-cells = <0>;
-    bindings = <&kp LC(C)>;
-    display-name = "Windows Copy";
+    wait-ms = <15>;
+    tap-ms = <10>;
+    bindings = <&kp H &kp Z &kp Z &kp N5 &kp N3 &kp N6 &kp N1>
+    , <&kp AT>, <&kp P>, <&kp S>
+    , <&kp U>, <&kp DOT>, <&kp E>, <&kp D>, <&kp U>;
   };
-
-  Win_Paste: Windows_Paste {
+  macro_select_word: select_word {
     compatible = "zmk,behavior-macro";
+    label = "macro_select_word";
     #binding-cells = <0>;
-    bindings = <&kp LC(V)>;
-    display-name = "Windows Paste";
+    wait-ms = <15>;
+    tap-ms = <40>;
+    bindings = <&kp LA(LEFT)>, <&kp LA(LS(RIGHT))>;
   };
-
-  Win_Select_All: Windows_SelectAll {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp LC(A)>;
-      display-name = "Windows Select All";
-  };
-
-  Win_Undo: Windows_Undo {
+  macro_select_line: select_line {
     compatible = "zmk,behavior-macro";
+    label = "macro_select_line";
     #binding-cells = <0>;
-    bindings = <&kp LC(Z)>;
-    display-name = "Windows Undo";
+    wait-ms = <15>;
+    tap-ms = <40>;
+    bindings = <&kp LG(LEFT)>, <&kp LG(LS(RIGHT))>;
   };
-
-  Win_Desktop: Win_Desk {
+  macro_undir: macro_undir {
     compatible = "zmk,behavior-macro";
+    label = "macro_undir";
     #binding-cells = <0>;
-    bindings = <&kp LG(D)>;
-    display-name = "Windows Desktop";
+    wait-ms = <15>;
+    tap-ms = <40>;
+    bindings = <&kp DOT &kp DOT &kp SLASH>;
   };
-
-  Win_File_Explorer: Win_Explr {
+  macro_main: macro_main {
     compatible = "zmk,behavior-macro";
+    label = "macro_main";
     #binding-cells = <0>;
-    bindings = <&kp LG(E)>;
-    display-name = "Windows Explorer";
+    wait-ms = <15>;
+    tap-ms = <10>;
+    bindings = <&kp I &kp F &kp SPACE &kp UNDER &kp UNDER &kp N &kp A &kp M &kp E &kp UNDER &kp UNDER &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp UNDER &kp UNDER &kp M &kp A &kp I &kp N &kp UNDER &kp UNDER &kp DQT &kp COLON &kp ENTER>;
   };
-
-  Win_Snip_Tool: Win_Snip {
+  macro_def: macro_def {
     compatible = "zmk,behavior-macro";
+    label = "macro_def";
     #binding-cells = <0>;
-    bindings = <&kp LS(LG(S))>;
-    display-name = "Windows Screen Snip";
+    wait-ms = <15>;
+    tap-ms = <10>;
+    bindings = <&kp D &kp E &kp F &kp SPACE>;
   };
-
-  Win_Show_All_Windows: Win_ShowAW {
+  macro_class: macro_class {
     compatible = "zmk,behavior-macro";
+    label = "macro_class";
     #binding-cells = <0>;
-    bindings = <&kp LG(TAB)>;
-    display-name = "Windows Show All Windows";
+    wait-ms = <15>;
+    tap-ms = <10>;
+    bindings = <&kp C &kp L &kp A &kp S &kp S &kp SPACE>;
   };
-
-  Mac_Cut: Mac_Cut {
+  macro_cancel_hints: macro_cancel_hints {
     compatible = "zmk,behavior-macro";
+    label = "macro_cancel_hints";
     #binding-cells = <0>;
-    bindings = <&kp LG(X)>;
-    display-name = "Mac Cut";
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&kp LEFT &kp RIGHT>;
   };
-
-  Mac_Copy: Mac_Copy {
+  vscode_terminal: vscode_terminal {
     compatible = "zmk,behavior-macro";
+    label = "vscode_terminal";
     #binding-cells = <0>;
-    bindings = <&kp LG(C)>;
-    display-name = "Mac Copy";
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&kp LC(GRAVE)>;
   };
-
-  Mac_Paste: Mac_Paste {
+  vscode_win1: vscode_win1 {
     compatible = "zmk,behavior-macro";
+    label = "vscode_win1";
     #binding-cells = <0>;
-    bindings = <&kp LG(V)>;
-    display-name = "Mac Paste";
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&kp LG(N1)>;
   };
-
-  Mac_Undo: Mac_Undo {
+  vscode_win2: vscode_win2 {
     compatible = "zmk,behavior-macro";
+    label = "vscode_win2";
     #binding-cells = <0>;
-    bindings = <&kp LG(Z)>;
-    display-name = "Mac Undo";
-  };
-
-  Mac_Select_All: Mac_SelAll {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(A)>;
-    display-name = "Mac Select All";
-  };
-
-  Mac_Mission_Control: Mac_ShowAW {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LC(UP_ARROW)>;
-    display-name = "Mac Show All Windows";
-  };
-
-  Mac_Snip_Tool: Mac_Snip {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LC(LG(LS(NUMBER_4)))>;
-    display-name = "Mac Screen Snip";
-  };
-
-  Win_Close_Program: Win_Close_Program {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LA(F4)>;
-    display-name = "Windows Close";
-  };
-
-  Win_Settings_Menu: Win_Settings_Menu {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(I)>;
-    display-name = "Windows Settings";
-  };
-
-  Win_Lock_PC: Win_Lock_PC {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(L)>;
-    display-name = "Windows Lock";
-  };
-
-  Win_Tile_Left: Win_Tile_Left {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(LEFT)>;
-    display-name = "Windows Tile Left";
-  };
-
-  Win_Tile_Up: Win_Tile_Up {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(UP_ARROW)>;
-    display-name = "Windows Tile Up";
-  };
-
-  Win_Tile_Down: Win_Tile_Down {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(DOWN)>;
-    display-name = "Windows Tile Down";
-  };
-
-  Win_Tile_Right: Win_Tile_Right {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(RIGHT)>;
-    display-name = "Windows Tile Right";
-  };
-
-  Mac_Spotlight_Search: Mac_Spotlight_Search {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(SPACE)>;
-    display-name = "Mac Spotlight Search";
-  };
-
-  Mac_Close_Program: Mac_Close_Program {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(Q)>;
-    display-name = "Mac Close Program";
-  };
-
-  Mac_Strike_Through_Text: Mac_Strike_Through_Text {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&kp LG(LS(X))>;
-    display-name = "Mac Strikethrough Text";
-  };
-
-  Double_Click: Double_Click {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&mkp MB1 &mkp MB1>;
-    display-name = "Double Click";
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&kp LG(N2)>;
   };
