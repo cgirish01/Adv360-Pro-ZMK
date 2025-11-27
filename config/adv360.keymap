@@ -7,10 +7,10 @@
 
 #define DEFAULT 0
 #define KP   1
-#define FN   2
-#define MOD   3
+#define MOD   2
+#define SHIFT_LAYER   3
+#define FN   2 // Mapping FN to MOD for now since FN layer is removed
 #define QWERTY   4
-#define SHIFT_LAYER   5
 #define SYMBOL_LAYER   6
 #define GAME_LAYER   7
 #define CODE   8
